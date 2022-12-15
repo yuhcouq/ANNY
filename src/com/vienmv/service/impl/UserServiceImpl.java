@@ -7,6 +7,7 @@ import com.vienmv.dao.UserDao;
 import com.vienmv.dao.impl.UserDaoImpl;
 import com.vienmv.model.User;
 import com.vienmv.service.UserService;
+import com.vienmv.util.Constant;
 
 public class UserServiceImpl implements UserService {
 	UserDao userDao = new UserDaoImpl();
@@ -27,7 +28,7 @@ public class UserServiceImpl implements UserService {
 		if (newUser.getAvatar() != null) {
 			// XOA ANH CU DI
 			String fileName = oldUser.getAvatar();
-			final String dir = "C:\\Users\\mai vien\\eclipse-workspace\\UNIFY\\upload";
+			String dir = Constant.Path.FILE_UPLOAD_DIR ;
 			File file = new File(dir + "/" + fileName);
 			if (file.exists()) {
 				file.delete();

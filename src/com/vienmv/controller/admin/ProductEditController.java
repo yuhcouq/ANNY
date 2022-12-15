@@ -25,6 +25,7 @@ import com.vienmv.service.UserService;
 import com.vienmv.service.impl.CategoryServiceImpl;
 import com.vienmv.service.impl.ProductServiceImpl;
 import com.vienmv.service.impl.UserServiceImpl;
+import com.vienmv.util.Constant;
 
 @WebServlet(urlPatterns = { "/admin/product/edit" })
 public class ProductEditController extends HttpServlet {
@@ -73,7 +74,7 @@ public class ProductEditController extends HttpServlet {
 					product.setPrice(Long.parseLong(item.getString()));
 				} else if (item.getFieldName().equals("image")) {
 					if (item.getSize() > 0) {// neu co file d
-						final String dir = "D:\\NY\\UPLOAD";
+						final String dir = Constant.Path.FILE_UPLOAD_DIR;
 						String originalFileName = item.getName();
 						int index = originalFileName.lastIndexOf(".");
 						String ext = originalFileName.substring(index + 1);

@@ -126,7 +126,7 @@
 						</div>
 					</div>
 					<!--/end result category-->
-					<c:forEach items="${productList }" var="p">
+					<c:forEach items="${productList}" var="p">
 
 						<div class="filter-results">
 
@@ -199,9 +199,9 @@
 					<div class="text-center">
 						<ul class="pagination pagination-v2">
 							<li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-							<li><a href="#">1</a></li>
-							<li class="active"><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
+							<c:if test=""><li><a href="#">${page - 1}</a></li></c:if>
+							<li class="active"><a href="#">${page}</a></li>
+							<c:if test=""><li><a href="#">${page + 1}</a></li></c:if>
 							<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 						</ul>
 					</div>
@@ -266,6 +266,8 @@
 			App.initScrollBar();
 			MouseWheel.initMouseWheel();
 		});
+		
+		$().
 	</script>
 	<!--[if lt IE 9]>
     <script src="${url}/plugins/respond.js"></script>

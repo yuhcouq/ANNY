@@ -19,6 +19,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import com.vienmv.model.User;
 import com.vienmv.service.UserService;
 import com.vienmv.service.impl.UserServiceImpl;
+import com.vienmv.util.Constant;
 
 @WebServlet(urlPatterns = { "/admin/user/edit" })
 public class UserEditController extends HttpServlet {
@@ -55,7 +56,7 @@ public class UserEditController extends HttpServlet {
 					user.setRoleId(Integer.parseInt(item.getString()));
 				} else if (item.getFieldName().equals("avatar")) {
 					if (item.getSize() > 0) {// neu co file d
-						final String dir = "F:\\upload";
+						final String dir = Constant.Path.FILE_UPLOAD_DIR;
 						String originalFileName = item.getName();
 						int index = originalFileName.lastIndexOf(".");
 						String ext = originalFileName.substring(index + 1);

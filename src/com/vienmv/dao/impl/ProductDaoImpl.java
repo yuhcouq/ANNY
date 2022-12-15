@@ -15,6 +15,7 @@ import com.vienmv.model.Product;
 import com.vienmv.model.User;
 import com.vienmv.service.CategoryService;
 import com.vienmv.service.impl.CategoryServiceImpl;
+import com.vienmv.util.Constant;
 
 public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 	CategoryService categortService = new CategoryServiceImpl();
@@ -185,14 +186,19 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 	}
 
 	@Override
-	public List<Product> seachByCategory(int cate_id) {
+	public List<Product> seachByCategory(int cate_id, int page) {
 		List<Product> productList = new ArrayList<Product>();
-		String sql = "SELECT product.id, product.name AS p_name, product.price, product.image, product.des , category.cate_name AS c_name, category.cate_id AS c_id 				 FROM Product , Category   where product.cate_id = category.cate_id and Category.cate_id=?";
+		int limit = Integer.parseInt(Constant.LIMIT);
+		int offset = (page-1) * limit;
+		String sql = "SELECT product.id, product.name AS p_name, product.price, product.image, product.des , category.cate_name AS c_name, category.cate_id AS c_id "
+				+ "FROM Product , Category where product.cate_id = category.cate_id and Category.cate_id=? order by product.id OFFSET ? ROWS FETCH FIRST ? ROWS ONLY;";
 		Connection conn = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, cate_id);
+			ps.setInt(2, offset);
+			ps.setInt(3, limit);
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
@@ -215,6 +221,27 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 		}
 
 		return productList;
+	}
+	
+	@Override
+	public int countByCategory(int cate_id) {
+		int count = 0;
+		List<Product> productList = new ArrayList<Product>();
+		String sql = "SELECT COUNT(*) AS count"
+				+ "FROM Product, Category where product.cate_id = category.cate_id and Category.cate_id=?";
+		Connection conn = super.getJDBCConnection();
+
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, cate_id);
+			ResultSet rs = ps.executeQuery();
+			count = rs.getRow();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return count;
 	}
 
 	@Override

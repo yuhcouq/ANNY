@@ -10,6 +10,7 @@ import com.vienmv.model.Product;
 import com.vienmv.model.User;
 import com.vienmv.service.ProductService;
 import com.vienmv.service.UserService;
+import com.vienmv.util.Constant;
 
 public class ProductServiceImpl implements ProductService {
 	ProductDao productDao = new ProductDaoImpl();
@@ -33,7 +34,7 @@ public class ProductServiceImpl implements ProductService {
 		if (newProduct.getImage() != null) {
 			// XOA ANH CU DI
 			String fileName = product.getImage();
-			final String dir = "F:\\upload";
+			final String dir = Constant.Path.FILE_UPLOAD_DIR;
 			File file = new File(dir + "/" + fileName);
 			if (file.exists()) {
 				file.delete();
@@ -68,8 +69,13 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<Product> seachByCategory(int cate_id) {
-		return productDao.seachByCategory(cate_id);
+	public List<Product> seachByCategory(int cate_id, int page) {
+		return productDao.seachByCategory(cate_id, page);
+	}
+	
+	@Override
+	public int countByCategory(int cate_id) {
+		return productDao.countByCategory(cate_id);
 	}
 
 	@Override

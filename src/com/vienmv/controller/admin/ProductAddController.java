@@ -25,6 +25,7 @@ import com.vienmv.service.UserService;
 import com.vienmv.service.impl.CategoryServiceImpl;
 import com.vienmv.service.impl.ProductServiceImpl;
 import com.vienmv.service.impl.UserServiceImpl;
+import com.vienmv.util.Constant;
 
 @WebServlet(urlPatterns = { "/admin/product/add" })
 public class ProductAddController extends HttpServlet {
@@ -60,7 +61,7 @@ public class ProductAddController extends HttpServlet {
 				} else if (item.getFieldName().equals("des")) {
 					product.setDes(item.getString());;
 				} else if (item.getFieldName().equals("image")) {
-					final String dir = "F:\\upload";
+					final String dir = Constant.Path.FILE_UPLOAD_DIR;
 					String originalFileName = item.getName();
 					int index = originalFileName.lastIndexOf(".");
 					String ext = originalFileName.substring(index + 1);
