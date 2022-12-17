@@ -14,12 +14,13 @@ public interface ProductService {
 	Product get(int id);
 
 	List<Product> getAll();
+	List<Product> getFeatured();
 
 	List<Product> search(String username);
 	
-	List<Product> seachByCategory(int cate_id, int page);
+	List<Product> seachByCategory(String cate_id, int page);
 	
-	int countByCategory(int cate_id);
+	int countByCategory(String cate_id);
 	
 	List<Product> seachByName(String productName);
 }

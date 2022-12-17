@@ -60,7 +60,12 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<Product> getAll() {
-		return productDao.getAll();
+		return productDao.getAll(0);
+	}
+	
+	@Override
+	public List<Product> getFeatured() {
+		return productDao.getAll(1);
 	}
 
 	@Override
@@ -69,12 +74,12 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<Product> seachByCategory(int cate_id, int page) {
+	public List<Product> seachByCategory(String cate_id, int page) {
 		return productDao.seachByCategory(cate_id, page);
 	}
 	
 	@Override
-	public int countByCategory(int cate_id) {
+	public int countByCategory(String cate_id) {
 		return productDao.countByCategory(cate_id);
 	}
 

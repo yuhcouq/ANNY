@@ -23,7 +23,9 @@ public class WellcomeController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Product> productList = productService.getAll();
+		List<Product> productFeaturedList = productService.getFeatured();
 		req.setAttribute("pwelcome", productList);
+		req.setAttribute("productFeaturedList", productFeaturedList);
 
 		req.getRequestDispatcher("/view/client/view/index.jsp").forward(req, resp);
 	}

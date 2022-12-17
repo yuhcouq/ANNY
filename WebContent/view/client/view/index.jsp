@@ -279,8 +279,7 @@
 				</div>
 
 				<ul class="list-inline owl-slider">
-
-					<c:forEach items="${pwelcome }" var="p">
+					<c:forEach items="${productFeaturedList }" var="p">
 						<c:url value="/image?fname=${p.image }" var="imgUrl"></c:url>
 						<li class="item">
 							<div class="product-img">
@@ -330,7 +329,7 @@
 				<div class="col-md-4 md-margin-bottom-30">
 					<div class="overflow-h">
 						<a class="illustration-v3 illustration-img1"
-							href="${pageContext.request.contextPath }/product/category?cate_id=1&page=1">
+							href="${pageContext.request.contextPath }/product/category?cate_id=A&page=1">
 							<span class="illustration-bg"> <span
 								class="illustration-ads"> <span
 									class="illustration-v3-category"> <span
@@ -345,7 +344,7 @@
 				<div class="col-md-4 md-margin-bottom-30">
 					<div class="overflow-h">
 						<a class="illustration-v3 illustration-img2"
-							href="${pageContext.request.contextPath }/product/category?cate_id=2&page=1">
+							href="${pageContext.request.contextPath }/product/category?cate_id=B&page=1">
 							<span class="illustration-bg"> <span
 								class="illustration-ads"> <span
 									class="illustration-v3-category"> <span
@@ -360,7 +359,7 @@
 				<div class="col-md-4">
 					<div class="overflow-h">
 						<a class="illustration-v3 illustration-img3"
-							href="${pageContext.request.contextPath }/product/category?cate_id=3&page=1">
+							href="${pageContext.request.contextPath }/product/category?cate_id=C&page=1">
 							<span class="illustration-bg"> <span
 								class="illustration-ads"> <span
 									class="illustration-v3-category"> <span
@@ -382,9 +381,8 @@
 			<!--=== Illustration v2 ===-->
 			<div class="row illustration-v2">
 
-				<c:forEach items="${pwelcome }" var="p">
+				<c:forEach items="${pwelcome }" var="p" begin="0" end="7">
 					<c:url value="/image?fname=${p.image }" var="imgUrl"></c:url>
-
 					<div class="col-md-3 col-sm-6 md-margin-bottom-30">
 						<div class="product-img">
 							<a

@@ -115,11 +115,16 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 	}
 
 	@Override
-	public List<Product> getAll() {
+	public List<Product> getAll(int featured) {
 
 		List<Product> productList = new ArrayList<Product>();
 		String sql = "SELECT product.id, product.name AS p_name, product.price, product.image, product.des , category.cate_name AS c_name, category.cate_id AS c_id  "
 				+ "FROM product INNER JOIN category " + "ON product.cate_id = category.cate_id";
+	
+		if(featured == 1) {
+			sql += " order by product.price DESC"; 
+		}
+		
 		Connection conn = super.getJDBCConnection();
 
 		try {
@@ -186,19 +191,18 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 	}
 
 	@Override
-	public List<Product> seachByCategory(int cate_id, int page) {
+	public List<Product> seachByCategory(String cate_id, int page) {
 		List<Product> productList = new ArrayList<Product>();
 		int limit = Integer.parseInt(Constant.LIMIT);
 		int offset = (page-1) * limit;
 		String sql = "SELECT product.id, product.name AS p_name, product.price, product.image, product.des , category.cate_name AS c_name, category.cate_id AS c_id "
-				+ "FROM Product , Category where product.cate_id = category.cate_id and Category.cate_id=? order by product.id OFFSET ? ROWS FETCH FIRST ? ROWS ONLY;";
+				+ "FROM Product , Category where product.cate_id = category.cate_id and category.cate_id IN " + cate_id + " order by product.id OFFSET ? ROWS FETCH FIRST ? ROWS ONLY;";
 		Connection conn = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setInt(1, cate_id);
-			ps.setInt(2, offset);
-			ps.setInt(3, limit);
+			ps.setInt(1, offset);
+			ps.setInt(2, limit);
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
@@ -224,18 +228,17 @@ public class ProductDaoImpl extends JDBCConnection implements ProductDao {
 	}
 	
 	@Override
-	public int countByCategory(int cate_id) {
+	public int countByCategory(String cate_id) {
 		int count = 0;
-		List<Product> productList = new ArrayList<Product>();
-		String sql = "SELECT COUNT(*) AS count"
-				+ "FROM Product, Category where product.cate_id = category.cate_id and Category.cate_id=?";
+		String sql = "SELECT COUNT(*) AS COUNT "
+				+ "FROM Product, Category where product.cate_id = category.cate_id and Category.cate_id IN " + cate_id;
 		Connection conn = super.getJDBCConnection();
 
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setInt(1, cate_id);
 			ResultSet rs = ps.executeQuery();
-			count = rs.getRow();
+			rs.next();
+			count = rs.getInt("COUNT");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

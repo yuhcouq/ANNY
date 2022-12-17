@@ -44,13 +44,11 @@
 				<hr />
 
 				<div class="row">
+					<button type="button" class="btn btn-success" style="margin-left:15px; margin-bottom:15px;"><a href="<c:url value='/admin/product/edit?id=-1'/>" class="center">ADD</a></button>
 					<div class="col-md-12">
 						<!-- Advanced Tables -->
 						<div class="panel panel-default">
 							<div class="panel-heading">Advanced Tables</div>
-							<button>
-								<a href="<c:url value='/admin/product/edit?id=-1'/>" class="center">ADD</a>
-							</button>
 							<div class="panel-body">
 								<div class="table-responsive">
 									<table class="table table-striped table-bordered table-hover"

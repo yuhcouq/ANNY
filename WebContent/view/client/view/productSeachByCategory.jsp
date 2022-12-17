@@ -63,7 +63,7 @@
 			<div class="container">
 				<span class="page-name">Product Page</span>
 				<h1>
-					Maecenas <span class="shop-green">enim</span> sapien
+					${cate_name}
 				</h1>
 				<ul class="breadcrumb-v4-in">
 					<li><a href="${pageContext.request.contextPath }">Home</a></li>
@@ -192,25 +192,24 @@
 						</div>
 					</c:forEach>
 					<!--/end filter resilts-->
-
 					<div class="text-center">
 						<ul class="pagination pagination-v2">
-							<c:if test="${page != 1}">
+							<c:if test="${page ne 1}">
 								<li><a
 									href="${pageContext.request.contextPath }/product/category?cate_id=${cate_id}&page=${page-1}"><i
 										class="fa fa-angle-left"></i></a></li>
 							</c:if>
-							<c:if test="${page != 1}">
+							<c:if test="${page ne 1}">
 								<li><a
 									href="${pageContext.request.contextPath }/product/category?cate_id=${cate_id}&page=${page-1}">${page - 1}</a></li>
 							</c:if>
 							<li class="active"><a
 								href="${pageContext.request.contextPath }/product/category?cate_id=${cate_id}&page=${page}">${page}</a></li>
-							<c:if test="${totalResult != page}">
+							<c:if test="${totalResult > page}">
 								<li><a
 									href="${pageContext.request.contextPath }/product/category?cate_id=${cate_id}&page=${page+1}">${page + 1}</a></li>
 							</c:if>
-							<c:if test="${totalResult != page}">
+							<c:if test="${totalResult > page}">
 								<li><a
 									href="${pageContext.request.contextPath }/product/category?cate_id=${cate_id}&page=${page+1}"><i
 										class="fa fa-angle-right"></i></a></li>
