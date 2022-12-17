@@ -42,7 +42,7 @@
 	<classpathentry kind="lib" path="Library/catalina.jar"/>
 	<classpathentry kind="lib" path="Library/jsp-api.jar"/>
 	<classpathentry kind="lib" path="Library/jstl-1.2.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="Library/sqljdbc4-2.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_201"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
