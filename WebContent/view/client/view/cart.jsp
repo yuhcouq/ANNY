@@ -45,4 +45,6 @@
 				</div>
 			</li>
 		</ul></li>
+		<li><a href="${pageContext.request.contextPath}/member/cart"
+							class="btn-u btn-brd btn-brd-hover btn-u-sea-shop btn-block">Order</a></li>
 </ul>

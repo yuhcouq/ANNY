@@ -134,7 +134,7 @@
 					<!-- SLIDE -->
 					<li class="revolution-mch-1" data-transition="fade"
 						data-slotamount="5" data-masterspeed="1000" data-title="Slide 3">
-						<!-- MAIN IMAGE --> <img src="${url}/img/3.jpg" alt="darkblurbg"
+						<!-- MAIN IMAGE --> <img src="${url}/img/2.jpg" alt="darkblurbg"
 						data-bgfit="cover" data-bgposition="right top"
 						data-bgrepeat="no-repeat">
 
@@ -142,7 +142,7 @@
 							data-hoffset="5" data-y="130" data-speed="1500" data-start="500"
 							data-easing="Back.easeInOut" data-endeasing="Power1.easeIn"
 							data-endspeed="300">
-							<strong>Luxury</strong> Watches
+							<strong>ANNY</strong> CLOTHES
 						</div> <!-- LAYER -->
 						<div class="tp-caption revolution-ch4 sft" data-x="right"
 							data-hoffset="0" data-y="210" data-speed="1400" data-start="2000"
@@ -166,7 +166,7 @@
 					<!-- SLIDE -->
 					<li class="revolution-mch-1" data-transition="fade"
 						data-slotamount="5" data-masterspeed="1000" data-title="Slide 4">
-						<!-- MAIN IMAGE --> <img src="${url}/img/2.jpg" alt="darkblurbg"
+						<!-- MAIN IMAGE --> <img src="${url}/img/3.jpg" alt="darkblurbg"
 						data-bgfit="cover" data-bgposition="left top"
 						data-bgrepeat="no-repeat">
 
@@ -333,8 +333,7 @@
 							<span class="illustration-bg"> <span
 								class="illustration-ads"> <span
 									class="illustration-v3-category"> <span
-										class="product-category">Men</span> <span
-										class="product-amount">56 Items</span>
+										class="product-category">Men</span>
 								</span>
 							</span>
 						</span>
@@ -348,8 +347,7 @@
 							<span class="illustration-bg"> <span
 								class="illustration-ads"> <span
 									class="illustration-v3-category"> <span
-										class="product-category">Women</span> <span
-										class="product-amount">56 Items</span>
+										class="product-category">Women</span>
 								</span>
 							</span>
 						</span>
@@ -363,8 +361,7 @@
 							<span class="illustration-bg"> <span
 								class="illustration-ads"> <span
 									class="illustration-v3-category"> <span
-										class="product-category">Children</span> <span
-										class="product-amount">56 Items</span>
+										class="product-category">Children</span>
 								</span>
 							</span>
 						</span>

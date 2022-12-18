@@ -10,15 +10,14 @@
 				<div class="col-md-4 md-margin-bottom-40">
 					<a href="index.html"><img class="footer-logo"
 						src="static/img/logo-2.png" alt=""></a>
-					<p>About Unify dolor sit amet, consectetur adipiscing elit.
-						Maecenas eget nisl id libero tincidunt sodales.</p>
+					<p>Information about Anny fashion store.</p>
 					<br>
 					<ul class="list-unstyled address-list margin-bottom-20">
-						<li><i class="fa fa-angle-right"></i>Ha Noi - Viet Nam</li>
-						<li><i class="fa fa-angle-right"></i>Phone: 0973.983.546</li>
-						<li><i class="fa fa-angle-right"></i>Hotline: 01299 725 789</li>
+						<li><i class="fa fa-angle-right"></i>Hue - Viet Nam</li>
+						<li><i class="fa fa-angle-right"></i>Phone: 0356.124.015</li>
+						<li><i class="fa fa-angle-right"></i>Hotline: 0356 124 015</li>
 						<li><i class="fa fa-angle-right"></i>Email:
-							maiviensoftware@gmail.com</li>
+							anny2001@gmail.com</li>
 					</ul>
 
 					<ul class="list-inline shop-social">
@@ -142,11 +141,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<p>
-						2018 &copy; Development by vienmv <a target="_blank"
-							href="https://www.facebook.com/vienmv.th">Htmlstream</a> | <a
-							href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-					</p>
 				</div>
 				<div class="col-md-6">
 					<ul class="list-inline sponsors-icons pull-right">

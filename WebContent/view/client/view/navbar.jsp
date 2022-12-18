@@ -14,7 +14,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="${pageContext.request.contextPath }">
-                        <img id="logo-header" src="${url}/img/logo1.png" alt="Logo">
+                        <img id="logo-header" src="${url}/img/logo.png" alt="Logo">
                     </a>
                 </div>
 
@@ -109,9 +109,9 @@
                                 Clothes
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="http://localhost:8080/UNIFY/product/category?cate_id=1">Men</a></li>
-                                <li><a href="http://localhost:8080/UNIFY/product/category?cate_id=2">WOMEN</a></li>
-                                <li><a href="http://localhost:8080/UNIFY/product/category?cate_id=3">CHILDREN</a></li>
+                                <li><a href="">Men</a></li>
+                                <li><a href="">WOMEN</a></li>
+                                <li><a href="">CHILDREN</a></li>
                             </ul>
                         </li>
                         <!-- End Clothes -->

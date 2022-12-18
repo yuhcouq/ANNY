@@ -23,7 +23,9 @@
 	<div id="wrapper">
 		<jsp:include page="/view/admin/view/nav-bar.jsp"></jsp:include>
 		<!-- /. NAV TOP  -->
-		<jsp:include page="/view/admin/view/slide-bar.jsp"></jsp:include>
+		<jsp:include page="/view/admin/view/slide-bar.jsp">
+			<jsp:param name="page" value="2"/>
+		</jsp:include>
 		<!-- /. NAV SIDE  -->
 		<div id="page-wrapper">
 			<div id="page-inner">
