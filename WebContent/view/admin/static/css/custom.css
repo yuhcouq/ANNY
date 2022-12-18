@@ -18,7 +18,7 @@ body {
 
  #wrapper {
     width: 100%;
-    background:#202020;
+    background:#497174;
 }
 
 #page-wrapper {
@@ -207,7 +207,7 @@ max-width:170px;
 
 .navbar-cls-top .navbar-brand {
 	color: #fff;
-background: #87805E;
+background: #1A120B;
 width: 260px;
 text-align: center;
 height: 60px;
@@ -215,7 +215,7 @@ font-size: 30px;
 font-weight: 700;
 }
 .active-menu {
-    background-color:#87805E!important;
+    background-color:#1A120B!important;
 }
 
 .arrow {
@@ -251,7 +251,7 @@ font-weight: 700;
 }
 .sidebar-collapse .nav > li > a {
 	color:#fff;
-	background:#202020;
+	background:#87805E;
 	text-shadow:none;
 	
 }
@@ -264,7 +264,7 @@ font-weight: 700;
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
 	
-	background:#0A0A0A;
+	background:#D5CEA3;
 	outline:0;
 }
 
@@ -301,17 +301,17 @@ font-weight: 700;
 }
 .navbar-side {
 	border:none;
-	background-color: #D5CEA3;
+	background-color: #497174;
 	
 }
 .navbar-cls-top {
-	background:#D5CEA3;
+	background:#497174;
 	border-bottom:none;
 	
 }
 .navbar-cls-top .navbar-brand:hover {
 
-background: #C55300;
+background: #1A120B;
 color:#fff;
 
 }
