@@ -66,7 +66,9 @@
 			<!-- End Topbar v3 -->
 
 			<!-- Navbar -->
-			<jsp:include page="/view/client/view/navbar.jsp"></jsp:include>
+			<jsp:include page="/view/client/view/navbar.jsp">
+				<jsp:param name="category" value="0"/>
+			</jsp:include>
 			<!-- End Navbar -->
 		</div>
 		<!--=== End Header v5 ===-->

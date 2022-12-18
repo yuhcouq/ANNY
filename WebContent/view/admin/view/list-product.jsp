@@ -46,7 +46,9 @@
 				<hr />
 
 				<div class="row">
-					<button type="button" class="btn btn-success" style="margin-left:15px; margin-bottom:15px;"><a href="<c:url value='/admin/product/edit?id=-1'/>" class="center">ADD</a></button>
+					<button type="button" class="btn btn-secondary" style="margin-left:15px; margin-bottom:15px;">
+						<a href="<c:url value='/admin/product/edit?id=-1'/>" class="center">ADD PRODUCT</a>
+					</button>
 					<div class="col-md-12">
 						<!-- Advanced Tables -->
 						<div class="panel panel-default">

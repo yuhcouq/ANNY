@@ -27,7 +27,7 @@
                     <!-- Nav Menu -->
                     <ul class="nav navbar-nav">
                         <!-- Pages -->
-                        <li class="dropdown active">
+                        <li class="dropdown ${param.category == '0' ? 'active' : ''}">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                                 Pages
                             </a>
@@ -44,7 +44,7 @@
                         <!-- End Pages -->
 
                         <!-- Promotion -->
-                        <li class="dropdown">
+                        <li class="dropdown ${(param.category == '1' || param.category == '4' || param.category == '7') ? 'active' : ''}">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                                 MEN
                             </a>
@@ -63,7 +63,7 @@
                         <!-- End Promotion -->
 
                         <!-- Gifts -->
-                        <li class="dropdown">
+                        <li class="dropdown ${(param.category == '2' || param.category == '5' || param.category == '8' || param.category == '10') ? 'active' : ''}">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                                WOMEN
                             </a>
@@ -85,7 +85,7 @@
                         <!-- End Gifts -->
 
                         <!-- Books -->
-                        <li class="dropdown">
+                        <li class="dropdown ${(param.category == '3' || param.category == '6' || param.category == '9') ? 'active' : ''}">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                                 CHILDREN
                             </a>

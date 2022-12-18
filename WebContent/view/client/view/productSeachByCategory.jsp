@@ -53,7 +53,9 @@
 			<!-- End Topbar v3 -->
 
 			<!-- Navbar -->
-			<jsp:include page="navbar.jsp"></jsp:include>
+			<jsp:include page="navbar.jsp">
+				<jsp:param name="category" value="${cate_id}"/>
+			</jsp:include>
 			<!-- End Navbar -->
 		</div>
 		<!--=== End Header v5 ===-->
