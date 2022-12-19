@@ -48,8 +48,18 @@
 				<c:otherwise>
 					<div class="col-sm-6">
 						<ul class="list-inline right-topbar pull-right">
-							<li><a href="${pageContext.request.contextPath }/member/myaccount">My Account</a> | <a
-								href="${pageContext.request.contextPath }/logout">Logout</a></li>
+							<li class="dropdown">
+								<a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+	                                <b>${sessionScope.account.username }</b>
+	                            </a>
+	                            <ul class="dropdown-menu">
+	                                <li><a href="${pageContext.request.contextPath }/member/myaccount">My account</a>
+	                                </li>
+	                                <li><a href="${pageContext.request.contextPath}/member/orderList">Order</a>
+	                                </li>
+	                            </ul>
+	                            	| <a href="${pageContext.request.contextPath }/logout">Logout</a>
+	                        </li>
 							<li><i class="search fa fa-search search-button"></i></li>
 						</ul>
 					</div>

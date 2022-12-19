@@ -54,6 +54,11 @@ public class CartServiceItemImpl implements CartItemService {
 	public List<CartItem> getAll() {
 		return cartItemDao.getAll();
 	}
+	
+	@Override
+	public List<CartItem> getAllByUser(int userId) {
+		return cartItemDao.getAllByUser(userId);
+	}
 
 	@Override
 	public List<CartItem> search(String keyword) {

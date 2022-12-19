@@ -1,65 +1,67 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<
-<script type="text/javascript">
-<!--
-	$(document).ready(function() {
-
-		var readURL = function(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-
-				reader.onload = function(e) {
-					$('.avatar').attr('src', e.target.result);
-				}
-
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-
-		$(".file-upload").on('change', function() {
-			readURL(this);
-		});
-	});
-//-->
-</script>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>My Account</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add to Cart</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico">
+<c:url value="/view/client/static" var="url"></c:url>
+
+<!-- Web Fonts -->
+<link rel='stylesheet' type='text/css'
+	href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+<!-- CSS Global Compulsory -->
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	href="${url}/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="${url}/css/shop.style.css">
+
+<!-- CSS Header and Footer -->
+<link rel="stylesheet" href="${url}/css/headers/header-v5.css">
+<link rel="stylesheet" href="${url}/css/footers/footer-v4.css">
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="${url}/plugins/animate.css">
+<link rel="stylesheet" href="${url}/plugins/line-icons/line-icons.css">
+<link rel="stylesheet"
+	href="${url}/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="${url}/plugins/jquery-steps/css/custom-jquery.steps.css">
+<link rel="stylesheet"
+	href="${url}/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
+
+<!-- Style Switcher -->
+<link rel="stylesheet" href="${url}/css/plugins/style-switcher.css">
+
+<!-- CSS Theme -->
+<link rel="stylesheet" href="${url}/css/theme-colors/default.css"
+	id="style_color">
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="${url}/css/custom.css">
 </head>
 <body>
+	<div class="header-v5 header-static">
+		<!-- Topbar v3 -->
+		<jsp:include page="/view/client/view/topbar.jsp"></jsp:include>
+		<!-- End Topbar v3 -->
 
-
-	<hr>
+		<!-- Navbar -->
+		<jsp:include page="/view/client/view/navbar.jsp">
+			<jsp:param name="category" value="0"/>
+		</jsp:include>
+		<!-- End Navbar -->
+	</div>
 	<div class="container bootstrap snippet">
+	<br>
+	<br>
+	<br>
 		<div class="row">
 			<div class="col-sm-10">
-				<h1>User name</h1>
+				<h1 style="text-transform: uppercase"><b>${sessionScope.account.username }</b></h1>
 			</div>
 			<div class="col-sm-2">
 				<a href="${pageContext.request.contextPath }" class="pull-right"><img
@@ -129,7 +131,7 @@
 							<div class="col-xs-6">
 								<label for="last_name"><h4>Website</h4></label> <input
 									type="text" class="form-control" name="website" id="last_name"
-									value="http://unify.com" title="enter your last name if any."
+									value="http://anny.com" title="enter your last name if any."
 									disabled="disabled">
 							</div>
 						</div>

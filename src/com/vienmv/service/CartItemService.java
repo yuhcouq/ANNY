@@ -17,4 +17,6 @@ public interface CartItemService {
 	List<CartItem> getAll();
 
 	List<CartItem> search(String keyword);
+	
+	List<CartItem> getAllByUser(int userId);
 }

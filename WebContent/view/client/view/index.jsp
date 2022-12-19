@@ -562,7 +562,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Clock</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>
@@ -597,7 +597,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Bag</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>
@@ -619,7 +619,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Jean</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>
@@ -636,7 +636,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Hat</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>
@@ -653,7 +653,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Jacket</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>
@@ -676,7 +676,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Ring</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>
@@ -694,7 +694,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Clock</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>
@@ -711,7 +711,7 @@
 						<div class="thumb-product-in">
 							<h4>
 								<a href="shop-ui-inner.html">Yuketen</a> – <a
-									href="shop-ui-inner.html">Derby Shoe</a>
+									href="shop-ui-inner.html">Derby Camera</a>
 							</h4>
 							<span class="thumb-product-type">Footwear - Oxfords</span>
 						</div>

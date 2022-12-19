@@ -102,8 +102,7 @@
 					<div>
 						<div class="header-tags">
 							<div class="overflow-h">
-								<h2>Shopping Cart</h2>
-								<p>Review &amp; edit your product</p>
+								<h2>Shopping order</h2>
 								<i class="rounded-x fa fa-check"></i>
 							</div>
 						</div>
@@ -111,36 +110,37 @@
 							<div class="table-responsive">
 								<table class="table table-striped">
 									<thead>
-										<tr>
+										<tr class="info">
+											<th>index</th>
+											<th>Date</th>
 											<th>Product</th>
+											<th>Quantity</th>
 											<th>Price</th>
-											<th>Qty</th>
-											<th>Total</th>
+											<th>Sum</th>
+											<th>Status</th>
 										</tr>
 									</thead>
 									<tbody>
-										<c:forEach items="${sessionScope.cart}" var="map">
-
-											<tr>
-												<c:url value="/image?fname=${map.value.product.image }"
+										<c:forEach items="${listCartItem}" var="map">
+										<tr class="odd gradeX">
+											<c:set var="index" value="${index + 1}" />
+											<td>${index }</td>
+											<td>${map.cart.buyDate }</td>
+											<c:url value="/image?fname=${map.product.image }"
 													var="imgUrl"></c:url>
-												<td class="product-in-table"><img
-													class="img-responsive" src="${imgUrl}" alt="">
-													<div class="product-it-in">
-														<h3>${map.value.product.name }</h3>
-														<span>${map.value.product.des }</span>
-													</div></td>
-												<td>$ ${map.value.product.price }</td>
-												<td>${map.value.quantity }</td>
-												<td class="shop-red">$ ${map.value.product.price * map.value.quantity }</td>
-												<td><a
-													href="${pageContext.request.contextPath}/member/cart/remove?pId=${map.value.product.id}"><button
-															type="button" class="close">
-															<span>&times;</span><span class="sr-only">Close</span>
-														</button></a></td>
-											</tr>
+											<td class="product-in-table">
+												<img class="img-responsive" src="${imgUrl}" alt="">
+												<div class="product-it-in">
+													<h3>${map.product.name }</h3>
+													<span>${map.product.des }</span>
+												</div>
+											</td>
+											<td>${map.quantity }</td>
+											<td>${map.product.price }</td>
+											<td>${map.quantity * map.product.price }</td>
+											<td class="center">Pending</td>
+										</tr>
 										</c:forEach>
-
 									</tbody>
 								</table>
 							</div>

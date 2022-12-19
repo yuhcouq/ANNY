@@ -16,7 +16,9 @@ public interface CartItemDao {
 	CartItem get(String name);
 
 	CartItem get(int id);
-
+	
+	List<CartItem> getAllByUser(int userId);
+	
 	List<CartItem> getAll();
 
 	List<CartItem> search(String name);
